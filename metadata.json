@@ -1,0 +1,6 @@
+{
+  "name": "MYG Beauty Room",
+  "description": "Salon de beauté et blanchiment dentaire à Marne-la-Vallée. Prenez rendez-vous en ligne, consultez nos conditions et politiques, et lisez les avis de nos clients.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
