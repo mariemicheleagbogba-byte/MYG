@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sparkles, Eye, ShieldAlert, CheckCircle2, Apple, ChevronDown, ChevronUp } from 'lucide-react';
+import { Eye, ShieldAlert, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface ConditionCard {
@@ -14,28 +14,16 @@ export default function PreAppointmentConditions() {
 
   const conditions: ConditionCard[] = [
     {
-      title: "Hygiène Buccale",
-      short: "Brossage et propreté",
-      detail: "Merci de bien vous brosser les dents juste avant votre arrivée. Un sourire propre garantit une pose du gel de blanchiment uniforme et optimale.",
-      icon: CheckCircle2
+      title: "Soin Visage & Cils",
+      short: "Sans maquillage ni produit",
+      detail: "Pour les rendez-vous Cils et soins visage, merci de venir sans aucun maquillage ni produit sur le visage (crème, sérum, huile...)",
+      icon: Eye
     },
     {
       title: "Contre-indications",
       short: "Sensibilités & Restrictions",
       detail: "Le blanchiment esthétique est déconseillé en cas de caries non traitées, gencives très irritées, port d'appareil orthodontique bagué, femmes enceintes ou allaitantes.",
       icon: ShieldAlert
-    },
-    {
-      title: "Alimentation 'Blanche'",
-      short: "Éviter les pigments pendant 48h",
-      detail: "Après le soin, évitez absolument le café, thé, vin, curry, sauce tomate, baies, ou cigarette pendant 48 heures. Vos dents absorbent les pigments très facilement durant cette phase d'ouverture des pores.",
-      icon: Apple
-    },
-    {
-      title: "Éclat & Détartrage",
-      short: "Planifiez votre nettoyage",
-      detail: "Pour un résultat optimal, effectuez un détartrage chez le dentiste environ 1 à 2 semaines avant votre séance. Le gel agit directement sur l'émail et non sur le tartre.",
-      icon: Sparkles
     }
   ];
 
