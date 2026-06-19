@@ -11,10 +11,7 @@ export default function FooterAction({ onOpenBooking }: FooterActionProps) {
       {/* Humorous invite text matching wireframe 1 exactly */}
       <div className="text-center mb-6 max-w-xs">
         <p className="text-[10px] sm:text-xs leading-relaxed text-gray-700 tracking-wide font-medium">
-          Voilà tu as tout lu et<br />
-          maintenant que tu as tout lu<br />
-          <span className="text-lg inline-block my-1 filter grayscale-0">😉</span><br />
-          Je t'invite à
+          Voilà que tu as tout lu et je t'invite à
         </p>
       </div>
 
@@ -54,13 +51,10 @@ export default function FooterAction({ onOpenBooking }: FooterActionProps) {
 
       {/* Copyright branding */}
       <div className="mt-8 text-center" id="footer-branding">
-        <div className="flex items-center justify-center gap-1.5 mb-1 text-black font-bold tracking-widest text-[10px]">
+        <div className="flex items-center justify-center gap-1.5 text-black font-bold tracking-widest text-[10px]">
           <Award className="w-3.5 h-3.5" />
           <span>{COMPANY_INFO.name.toUpperCase()} BEAUTY ROOM</span>
         </div>
-        <p className="text-[8px] uppercase tracking-[0.2em] text-gray-400">
-          Créateur de Sourires d'Exception © 2026. Tous droits réservés.
-        </p>
       </div>
     </footer>
   );

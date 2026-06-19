@@ -58,9 +58,9 @@ export default function ReviewsSection({ reviews, onAddReview }: ReviewsSectionP
           </span>
           <div className="flex space-x-1.5 justify-center mb-1">
             {Array.from({ length: 5 }).map((_, i) => (
-              <Star 
-                key={i} 
-                className="w-5 h-5 text-yellow-500 fill-current" 
+              <Star
+                key={i}
+                className="w-6 h-6 fill-amber-400 text-amber-400 drop-shadow-[0_0_4px_rgba(251,191,36,0.7)]"
               />
             ))}
           </div>
@@ -96,9 +96,9 @@ export default function ReviewsSection({ reviews, onAddReview }: ReviewsSectionP
                     </h4>
                     <div className="flex space-x-0.5 mt-0.5">
                       {Array.from({ length: 5 }).map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className={`w-3 h-3 ${i < rev.rating ? 'text-yellow-400 fill-current' : 'text-gray-200'}`} 
+                        <Star
+                          key={i}
+                          className={`w-3.5 h-3.5 ${i < rev.rating ? 'fill-amber-400 text-amber-400 drop-shadow-[0_0_2px_rgba(251,191,36,0.6)]' : 'fill-gray-200 text-gray-200'}`}
                         />
                       ))}
                     </div>

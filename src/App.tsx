@@ -164,7 +164,7 @@ export default function App() {
                       className="p-4 bg-gray-50 hover:bg-gray-100 rounded-2xl border border-gray-150 text-center flex flex-col items-center cursor-pointer transition-colors"
                       id="btn-goto-faq"
                     >
-                      <HelpCircle className="w-5 h-5 text-blue-500 mb-1.5" />
+                      <HelpCircle className="w-5 h-5 text-black mb-1.5" />
                       <span className="text-[10px] uppercase font-extrabold tracking-wider text-black">FAQ & Contact</span>
                       <span className="text-[8px] text-gray-400 mt-0.5 leading-none">{SERVICES.length * 2}+ Thèmes abordés</span>
                     </button>
