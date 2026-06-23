@@ -64,38 +64,47 @@ export const SERVICES: Service[] = [
     imageAddress: "",
     options: [
       {
-        id: "lash_lift",
-        name: "Lash Lift + Teinture",
-        duration: "1h",
-        price: 55,
-        description: "Rehaussement de cils à la racine pour un effet mascara semi-permanent durable, incluant un soin fortifiant hautement concentré en kératine.",
-        atHomeEligible: true,
-        category: "extensions_cils"
-      },
-      {
-        id: "brow_lift",
-        name: "Brow Lift Intense + Soin",
-        duration: "45min",
+        id: "cil_a_cil",
+        name: "Cil à Cil",
+        duration: "1h30",
         price: 45,
-        description: "Discipline, rehausse et restructure vos sourcils pour un effet dense, fourni et symétrique ultra-tendance.",
-        atHomeEligible: true,
-        category: "extensions_cils"
-      },
-      {
-        id: "pose_cil_a_cil",
-        name: "Pose Complète - Cil à Cil",
-        duration: "1h15",
-        price: 65,
-        description: "Fixation d'une extension unique sur chaque cil naturel. Idéal pour un fini soigné, élégant et discret au quotidien.",
+        description: "Pose d'une extension unique sur chaque cil naturel pour un résultat soigné, élégant et discret au quotidien.",
         atHomeEligible: false,
         category: "extensions_cils"
       },
       {
-        id: "pose_volume_russe",
-        name: "Pose Complète - Volume Russe",
-        duration: "1h45",
-        price: 85,
-        description: "Création de bouquets ultra-légers pour un effet de densité noire intense et un volume aérien spectaculaire de star.",
+        id: "pose_mixte",
+        name: "Pose Mixte",
+        duration: "1h30",
+        price: 55,
+        description: "Association de techniques cil à cil et volume pour un regard intensifié et un effet naturel densifié sur mesure.",
+        atHomeEligible: false,
+        category: "extensions_cils"
+      },
+      {
+        id: "volume_intense",
+        name: "Volume Intense",
+        duration: "2h",
+        price: 60,
+        description: "Bouquets ultra-légers pour un effet de densité noire intense et un volume spectaculaire.",
+        atHomeEligible: false,
+        category: "extensions_cils"
+      },
+      {
+        id: "remplissage_2_semaines",
+        name: "Remplissage 2 Semaines",
+        duration: "45min",
+        price: 30,
+        description: "Retouche complète pour maintenir l'effet de vos extensions à 2 semaines de la pose initiale.",
+        atHomeEligible: false,
+        category: "extensions_cils"
+      },
+      {
+        id: "remplissage_3_semaines",
+        name: "Remplissage 3 Semaines",
+        duration: "1h",
+        price: 40,
+        description: "Remplissage complet pour redonner volume et densité à vos extensions à 3 semaines de la pose initiale.",
         atHomeEligible: false,
         category: "extensions_cils"
       }
@@ -104,24 +113,105 @@ export const SERVICES: Service[] = [
   {
     id: "lifting_colombien",
     name: "Lifting Colombien",
-    description: "Technique de galbe naturel pour redessiner et sublimer les courbes.",
+    description: "Sculpture corporelle par ventouses pour galber, tonifier et redessiner fessiers et hanches.",
     imageAddress: "",
     options: [
       {
-        id: "seance_unique_lifting",
-        name: "Séance Unique Galbe",
-        duration: "45min",
-        price: 50,
-        description: "Stimulation sanguine locale profonde par système de ventouses pour pulper les tissus, activer la circulation lymphatique et lisser la cellulite.",
+        id: "fessiers_seance",
+        name: "Fessiers",
+        duration: "30min",
+        price: 30,
+        description: "Séance à l'unité ciblant les fessiers par stimulation profonde par ventouses pour pulper et tonifier.",
         atHomeEligible: false,
         category: "lifting_colombien"
       },
       {
-        id: "cure_silhouette_5",
-        name: "Cure Silhouette 5 Séances",
+        id: "hanches_seance",
+        name: "Hanches",
+        duration: "30min",
+        price: 30,
+        description: "Séance à l'unité ciblant les hanches pour lisser, drainer et redessiner la silhouette.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "fessiers_hanches_seance",
+        name: "Fessiers + Hanches",
+        duration: "45min",
+        price: 50,
+        description: "Séance à l'unité combinée ciblant fessiers et hanches pour un résultat global et harmonieux.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "sculpt_hanches_3",
+        name: "Sculpt & Hanches · 3 Séances",
+        duration: "3 séances",
+        price: 90,
+        description: "Forfait de 3 séances Sculpt & Hanches pour amorcer un remodelage durable et visible de la silhouette.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "sculpt_hanches_5",
+        name: "Sculpt & Hanches · 5 Séances",
         duration: "5 séances",
-        price: 220,
-        description: "Protocole intensif de 5 séances espacées pour un galbe durable, une tonification tissulaire pérenne et un remodelage ciblé des fessiers ou des cuisses.",
+        price: 150,
+        description: "Forfait de 5 séances Sculpt & Hanches pour un galbe renforcé et une tonification tissulaire progressive.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "sculpt_hanches_7",
+        name: "Sculpt & Hanches · 7 Séances",
+        duration: "7 séances",
+        price: 210,
+        description: "Forfait de 7 séances Sculpt & Hanches pour un résultat transformateur et durable sur la silhouette.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "sculpt_hanches_10",
+        name: "Sculpt & Hanches · 10 Séances",
+        duration: "10 séances",
+        price: 250,
+        description: "Forfait de 10 séances Sculpt & Hanches, le protocole intensif pour une transformation complète et pérenne.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "fessiers_hanches_3",
+        name: "Fessiers & Hanches · 3 Séances",
+        duration: "3 séances",
+        price: 145,
+        description: "Forfait de 3 séances ciblant fessiers et hanches simultanément pour une silhouette galbée et harmonisée.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "fessiers_hanches_5",
+        name: "Fessiers & Hanches · 5 Séances",
+        duration: "5 séances",
+        price: 240,
+        description: "Forfait de 5 séances fessiers & hanches pour un remodelage ciblé et une tonification profonde et durable.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "fessiers_hanches_7",
+        name: "Fessiers & Hanches · 7 Séances",
+        duration: "7 séances",
+        price: 330,
+        description: "Forfait de 7 séances fessiers & hanches pour une transformation visible et un galbe sculpté sur toute la zone.",
+        atHomeEligible: false,
+        category: "lifting_colombien"
+      },
+      {
+        id: "fessiers_hanches_10",
+        name: "Fessiers & Hanches · 10 Séances",
+        duration: "10 séances",
+        price: 350,
+        description: "Forfait de 10 séances fessiers & hanches, le protocole complet pour une silhouette entièrement remodelée.",
         atHomeEligible: false,
         category: "lifting_colombien"
       }
@@ -145,9 +235,9 @@ export const SERVICES: Service[] = [
       {
         id: "offre_duo",
         name: "Offre Duo",
-        duration: "2h15",
-        price: 140,
-        description: "Venez accompagnée pour profiter d'un tarif préférentiel d'exception ! Les soins sont réalisés l'un après l'autre ou simultanément dans un univers cocooning.",
+        duration: "2h",
+        price: 70,
+        description: "70€ par personne — uniquement valable à deux. Venez accompagnée pour profiter d'un tarif préférentiel d'exception dans un univers cocooning.",
         atHomeEligible: true,
         category: "blanchiment"
       },
@@ -159,6 +249,15 @@ export const SERVICES: Service[] = [
         description: "Idéale dans les 6 mois pour entretenir la blancheur éclatante de votre émail et éliminer instantanément les tâches récentes de café, thé ou tabac.",
         atHomeEligible: true,
         category: "blanchiment"
+      },
+      {
+        id: "detartrage",
+        name: "Détartrage",
+        duration: "45min",
+        price: 50,
+        description: "Soin d'élimination du tartre et des dépôts pour retrouver des dents saines, propres et une haleine fraîche.",
+        atHomeEligible: false,
+        category: "blanchiment"
       }
     ]
   },
@@ -169,20 +268,38 @@ export const SERVICES: Service[] = [
     imageAddress: "",
     options: [
       {
-        id: "formule_regard_sourire",
-        name: "Formule Dentaire & Regard",
+        id: "formule_glow",
+        name: "Formule Glow",
         duration: "2h",
-        price: 120,
-        description: "Le combo star : une séance complète de blanchiment dentaire esthétique (1h) couplée à un Lash Lift complet de vos cils avec teinture noire intense.",
+        price: 100,
+        description: "Blanchiment dentaire + soin visage Hydrapure. Au lieu de 120€. Le duo éclat pour un sourire et un teint sublimés en une seule séance.",
         atHomeEligible: false,
         category: "formules_signature"
       },
       {
-        id: "formule_glow_total",
-        name: "Formule Visage Glow & Sourire",
-        duration: "2h15",
-        price: 135,
-        description: "Soin visage Miracle Face drainant combiné à un traitement complet de blanchiment dentaire esthétique pour un coup d'éclat total.",
+        id: "formule_regard_sourire",
+        name: "Formule Regard et Sourire",
+        duration: "2h",
+        price: 115,
+        description: "Blanchiment dentaire + extensions de cils (cil à cil). Au lieu de 125€. Le combo star pour un regard intense et un sourire éclatant.",
+        atHomeEligible: false,
+        category: "formules_signature"
+      },
+      {
+        id: "formule_sculpt_glow",
+        name: "Formule Sculpt et Glow",
+        duration: "2h",
+        price: 85,
+        description: "Lifting colombien (fessiers + hanches) + soin visage Hydrapure. Au lieu de 100€. Corps sculpté et teint lumineux en une seule session.",
+        atHomeEligible: false,
+        category: "formules_signature"
+      },
+      {
+        id: "formule_signature_complete",
+        name: "Formule Signature Complète",
+        duration: "3h",
+        price: 160,
+        description: "Blanchiment dentaire + extensions de cils + soin visage Hydrapure. Au lieu de 175€. La formule ultime pour une transformation beauté totale.",
         atHomeEligible: false,
         category: "formules_signature"
       }
