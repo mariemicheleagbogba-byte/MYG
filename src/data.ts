@@ -25,7 +25,7 @@ export const SERVICES: Service[] = [
   {
     id: "soins_visage",
     name: "Soin Visage",
-    description: "Éclat et hydratation personnalisés. Des rituels sur-mesure pour purifier, hydrater et régénérer votre peau en profondeur.",
+    description: "Soin profond alliant technologie d'hydradermabrasion et vapeur pour : Nettoyer, Exfolier, Extraire les impuretés et Hydrater intensément.",
     imageAddress: "",
     options: [
       {
@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
   {
     id: "extensions_cils",
     name: "Extensions de Cils",
-    description: "Regard sublimé jusqu'à 4 semaines. Prestations de rehaussement, de teinture et d'extensions pour habiller vos yeux d'un voile de glamour naturel.",
+    description: "Pose sur-mesure pour intensifier et structurer le regard avec élégance.",
     imageAddress: "",
     options: [
       {
@@ -104,7 +104,7 @@ export const SERVICES: Service[] = [
   {
     id: "lifting_colombien",
     name: "Lifting Colombien",
-    description: "Corps sculpté et tonifié. Soin innovant non-invasif de thérapie sous vide pour galber et lisser les courbes.",
+    description: "Technique de galbe naturel pour redessiner et sublimer les courbes.",
     imageAddress: "",
     options: [
       {
@@ -128,9 +128,44 @@ export const SERVICES: Service[] = [
     ]
   },
   {
+    id: "blanchiment",
+    name: "Blanchiment Dentaire",
+    description: "Soin éclaircissant pour un sourire plus lumineux et uniforme.",
+    imageAddress: "",
+    options: [
+      {
+        id: "seance_complete",
+        name: "Séance complète (1h)",
+        duration: "1h",
+        price: 80,
+        description: "Soin d'une heure pour un sourire éclatant de blancheur, avec application d'un gel protecteur de fabrication française conforme aux exigences européennes et lampe LED de haute technologie.",
+        atHomeEligible: true,
+        category: "blanchiment"
+      },
+      {
+        id: "offre_duo",
+        name: "Offre Duo (2h15)",
+        duration: "2h15",
+        price: 140,
+        description: "Venez accompagnée pour profiter d'un tarif préférentiel d'exception ! Les soins sont réalisés l'un après l'autre ou simultanément dans un univers cocooning.",
+        atHomeEligible: true,
+        category: "blanchiment"
+      },
+      {
+        id: "retouche",
+        name: "Séance de retouche (1h)",
+        duration: "1h",
+        price: 60,
+        description: "Idéale dans les 6 mois pour entretenir la blancheur éclatante de votre émail et éliminer instantanément les tâches récentes de café, thé ou tabac.",
+        atHomeEligible: true,
+        category: "blanchiment"
+      }
+    ]
+  },
+  {
     id: "formules_signature",
     name: "Nos Formules Signature",
-    description: "Combinaisons beauté complètes. Les meilleures associations de soins de Sabrina à un tarif préférentiel exclusif.",
+    description: "Combinaisons beauté complètes. Les meilleures associations de soins à un prix réduit.",
     imageAddress: "",
     options: [
       {
@@ -150,41 +185,6 @@ export const SERVICES: Service[] = [
         description: "Soin visage Miracle Face drainant combiné à un traitement complet de blanchiment dentaire esthétique pour un coup d'éclat total.",
         atHomeEligible: false,
         category: "formules_signature"
-      }
-    ]
-  },
-  {
-    id: "blanchiment",
-    name: "Blanchiment Dentaire",
-    description: "Sourire éclatant et lumineux. Traitement d'éclaircissement dentaire esthétique de pointe, totalement indolore et respectueux de votre émail.",
-    imageAddress: "",
-    options: [
-      {
-        id: "seance_complete",
-        name: "Séance complète (1h)",
-        duration: "1h",
-        price: 80,
-        description: "Soin d'une heure pour un sourire éclatant de blancheur, avec application d'un gel protecteur de fabrication française conforme aux exigences européennes et lampe LED de haute technologie.",
-        atHomeEligible: true,
-        category: "blanchiment"
-      },
-      {
-        id: "offre_duo",
-        name: "Offre Duo (2h15)",
-        duration: "2h15",
-        price: 140, // 70€ per person, total 140€ for two
-        description: "Venez accompagnée pour profiter d'un tarif préférentiel d'exception ! Les soins sont réalisés l'un après l'autre ou simultanément dans un univers cocooning.",
-        atHomeEligible: true,
-        category: "blanchiment"
-      },
-      {
-        id: "retouche",
-        name: "Séance de retouche (1h)",
-        duration: "1h",
-        price: 60,
-        description: "Idéale dans les 6 mois pour entretenir la blancheur éclatante de votre émail et éliminer instantanément les tâches récentes de café, thé ou tabac.",
-        atHomeEligible: true,
-        category: "blanchiment"
       }
     ]
   }
