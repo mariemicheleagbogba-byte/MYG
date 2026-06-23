@@ -47,7 +47,7 @@ export default function WelcomeSection() {
 
       <div className="px-6 max-w-md">
         <h3 className="text-lg font-bold font-sans tracking-tight mb-2 text-black">
-          MYG par Sabrina
+          MYG par Gabrielle
         </h3>
         <p className="text-xs leading-relaxed text-gray-600 max-w-sm mx-auto">
           Bienvenue dans notre salon, parce que vous méritez le meilleur, je vous propose une large gamme de soins

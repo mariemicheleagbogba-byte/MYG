@@ -283,7 +283,8 @@ export const SERVICES: Service[] = [
         name: "Formule Glow",
         duration: "2h",
         price: 100,
-        description: "Blanchiment dentaire + soin visage Hydrapure. Au lieu de 120€. Le duo éclat pour un sourire et un teint sublimés en une seule séance.",
+        originalPrice: 120,
+        description: "Blanchiment dentaire + soin visage Hydrapure. Le duo éclat pour un sourire et un teint sublimés en une seule séance.",
         atHomeEligible: false,
         category: "formules_signature"
       },
@@ -292,7 +293,8 @@ export const SERVICES: Service[] = [
         name: "Formule Regard et Sourire",
         duration: "2h",
         price: 115,
-        description: "Blanchiment dentaire + extensions de cils (cil à cil). Au lieu de 125€. Le combo star pour un regard intense et un sourire éclatant.",
+        originalPrice: 125,
+        description: "Blanchiment dentaire + extensions de cils (cil à cil). Le combo star pour un regard intense et un sourire éclatant.",
         atHomeEligible: false,
         category: "formules_signature"
       },
@@ -301,7 +303,8 @@ export const SERVICES: Service[] = [
         name: "Formule Sculpt et Glow",
         duration: "2h",
         price: 85,
-        description: "Lifting colombien (fessiers + hanches) + soin visage Hydrapure. Au lieu de 100€. Corps sculpté et teint lumineux en une seule session.",
+        originalPrice: 100,
+        description: "Lifting colombien (fessiers + hanches) + soin visage Hydrapure. Corps sculpté et teint lumineux en une seule session.",
         atHomeEligible: false,
         category: "formules_signature"
       },
@@ -310,7 +313,8 @@ export const SERVICES: Service[] = [
         name: "Formule Signature Complète",
         duration: "3h",
         price: 160,
-        description: "Blanchiment dentaire + extensions de cils + soin visage Hydrapure. Au lieu de 175€. La formule ultime pour une transformation beauté totale.",
+        originalPrice: 175,
+        description: "Blanchiment dentaire + extensions de cils + soin visage Hydrapure. La formule ultime pour une transformation beauté totale.",
         atHomeEligible: false,
         category: "formules_signature"
       }
