@@ -29,30 +29,30 @@ export const SERVICES: Service[] = [
     imageAddress: "",
     options: [
       {
-        id: "hydra_clean",
-        name: "Soin Purifiant Profond (1h)",
+        id: "seance_express_visage",
+        name: "Séance Express",
+        duration: "45min",
+        price: 40,
+        description: "Soin express pour purifier, nettoyer et hydrater votre peau en profondeur. Idéal pour un coup d'éclat rapide.",
+        atHomeEligible: false,
+        category: "soins_visage"
+      },
+      {
+        id: "seance_complete_visage",
+        name: "Séance Complète",
         duration: "1h",
-        price: 65,
-        description: "Exfoliation, extraction minutieuse des comédons, bain de vapeur vapozone et masque purifiant intense adapté à votre épiderme.",
+        price: 50,
+        description: "Soin complet alliant hydradermabrasion et vapeur pour nettoyer, exfolier, extraire les impuretés et hydrater intensément.",
         atHomeEligible: false,
         category: "soins_visage"
       },
       {
-        id: "hydra_premium",
-        name: "Soin Signature Glow Premium (1h20)",
-        duration: "1h20",
-        price: 95,
-        description: "Soint complet d'hydra-dermabrasion combiné à une radiofréquence raffermissante, infusion d'actifs botaniques et masque d'hydrogel de luxe.",
+        id: "cure_3_seances_visage",
+        name: "Cure 3 Séances",
+        duration: "3 séances",
+        price: 135,
+        description: "Protocole de 3 séances espacées pour un résultat optimal et durable. La solution idéale pour une peau transformée en profondeur.",
         atHomeEligible: false,
-        category: "soins_visage"
-      },
-      {
-        id: "miracle_face",
-        name: "Soin Miracle Face Drainant (50min)",
-        duration: "50min",
-        price: 70,
-        description: "Modelage tonique des fascias qui dessine l'ovale du visage, draine les toxines et réactive instantanément la microcirculation pour un effet lifté immédiat.",
-        atHomeEligible: true,
         category: "soins_visage"
       }
     ]
@@ -65,7 +65,7 @@ export const SERVICES: Service[] = [
     options: [
       {
         id: "lash_lift",
-        name: "Lash Lift + Teinture (1h)",
+        name: "Lash Lift + Teinture",
         duration: "1h",
         price: 55,
         description: "Rehaussement de cils à la racine pour un effet mascara semi-permanent durable, incluant un soin fortifiant hautement concentré en kératine.",
@@ -74,7 +74,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "brow_lift",
-        name: "Brow Lift Intense + Soin (45min)",
+        name: "Brow Lift Intense + Soin",
         duration: "45min",
         price: 45,
         description: "Discipline, rehausse et restructure vos sourcils pour un effet dense, fourni et symétrique ultra-tendance.",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "pose_cil_a_cil",
-        name: "Pose Complète - Cil à Cil (1h15)",
+        name: "Pose Complète - Cil à Cil",
         duration: "1h15",
         price: 65,
         description: "Fixation d'une extension unique sur chaque cil naturel. Idéal pour un fini soigné, élégant et discret au quotidien.",
@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "pose_volume_russe",
-        name: "Pose Complète - Volume Russe (1h45)",
+        name: "Pose Complète - Volume Russe",
         duration: "1h45",
         price: 85,
         description: "Création de bouquets ultra-légers pour un effet de densité noire intense et un volume aérien spectaculaire de star.",
@@ -109,7 +109,7 @@ export const SERVICES: Service[] = [
     options: [
       {
         id: "seance_unique_lifting",
-        name: "Séance Unique Galbe (45min)",
+        name: "Séance Unique Galbe",
         duration: "45min",
         price: 50,
         description: "Stimulation sanguine locale profonde par système de ventouses pour pulper les tissus, activer la circulation lymphatique et lisser la cellulite.",
@@ -135,7 +135,7 @@ export const SERVICES: Service[] = [
     options: [
       {
         id: "seance_complete",
-        name: "Séance complète (1h)",
+        name: "Séance Complète",
         duration: "1h",
         price: 80,
         description: "Soin d'une heure pour un sourire éclatant de blancheur, avec application d'un gel protecteur de fabrication française conforme aux exigences européennes et lampe LED de haute technologie.",
@@ -144,7 +144,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "offre_duo",
-        name: "Offre Duo (2h15)",
+        name: "Offre Duo",
         duration: "2h15",
         price: 140,
         description: "Venez accompagnée pour profiter d'un tarif préférentiel d'exception ! Les soins sont réalisés l'un après l'autre ou simultanément dans un univers cocooning.",
@@ -153,7 +153,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "retouche",
-        name: "Séance de retouche (1h)",
+        name: "Séance de Retouche",
         duration: "1h",
         price: 60,
         description: "Idéale dans les 6 mois pour entretenir la blancheur éclatante de votre émail et éliminer instantanément les tâches récentes de café, thé ou tabac.",
@@ -170,7 +170,7 @@ export const SERVICES: Service[] = [
     options: [
       {
         id: "formule_regard_sourire",
-        name: "Formule Dentaire & Regard (2h)",
+        name: "Formule Dentaire & Regard",
         duration: "2h",
         price: 120,
         description: "Le combo star : une séance complète de blanchiment dentaire esthétique (1h) couplée à un Lash Lift complet de vos cils avec teinture noire intense.",
@@ -179,7 +179,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "formule_glow_total",
-        name: "Formule Visage Glow & Sourire (2h15)",
+        name: "Formule Visage Glow & Sourire",
         duration: "2h15",
         price: 135,
         description: "Soin visage Miracle Face drainant combiné à un traitement complet de blanchiment dentaire esthétique pour un coup d'éclat total.",

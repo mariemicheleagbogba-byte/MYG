@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, Sparkles, MapPin, HelpCircle, Send } from 'lucide-react';
+import { ChevronLeft, Sparkles, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SERVICES, COMPANY_INFO } from '../data';
 import { ServiceOption, Service } from '../types';
@@ -275,9 +275,11 @@ export default function ServiceDetailView({
                       <span className="font-mono font-bold text-base text-black bg-gray-50 px-2 py-0.5 rounded border border-gray-150">
                         {option.price}€
                       </span>
-                      <span className="text-[9px] font-mono text-gray-400 mt-1 uppercase font-semibold">
-                        Durée : {option.duration}
-                      </span>
+                      {activeServiceId === 'soins_visage' && (
+                        <span className="text-[9px] font-mono text-gray-400 mt-1 uppercase font-semibold">
+                          Durée : {option.duration}
+                        </span>
+                      )}
                     </div>
                   </div>
 
@@ -285,22 +287,8 @@ export default function ServiceDetailView({
                     {option.description}
                   </p>
 
-                  <div className="flex justify-between items-center bg-gray-50/50 p-2.5 rounded-xl border border-gray-100">
-                    <span className="text-[9px] text-gray-500 font-bold uppercase tracking-wider font-mono flex items-center gap-1">
-                      {option.atHomeEligible ? (
-                        <>
-                          <MapPin className="w-3.5 h-3.5 text-black" />
-                          <span className="text-stone-700">✨ Déplacement Domicile Possible</span>
-                        </>
-                      ) : (
-                        <>
-                          <HelpCircle className="w-3.5 h-3.5 text-gray-400" />
-                          <span>Uniquement au Salon</span>
-                        </>
-                      )}
-                    </span>
-                    
-                    <button 
+                  <div className="flex justify-end">
+                    <button
                       onClick={() => onSelectOption(activeService.id, option)}
                       className="bg-black hover:bg-neutral-850 active:scale-95 text-white font-bold py-1.5 px-4 rounded-sm text-[10px] uppercase tracking-wider transition-all cursor-pointer font-mono"
                       id={`btn-book-formula-${option.id}`}
