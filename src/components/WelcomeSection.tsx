@@ -33,7 +33,7 @@ export default function WelcomeSection() {
   return (
     <section className="flex flex-col items-center text-center bg-white border-b border-gray-50">
       {/* Profile Video — rectangle pleine largeur */}
-      <div className="w-full overflow-hidden mb-6" style={{ height: '240px' }}>
+      <div className="w-full overflow-hidden mb-6 rounded-3xl" style={{ height: '240px' }}>
         <video
           src="/profile-video.mp4"
           autoPlay
