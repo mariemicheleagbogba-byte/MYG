@@ -235,14 +235,8 @@ export default function ServiceDetailView({
 
             {/* Big Active Service Preview Illustration */}
             <section className="px-6 my-4">
-              <div className="shadow-xs rounded-2xl overflow-hidden relative">
+              <div className="shadow-xs rounded-2xl overflow-hidden">
                 {activeService && renderServiceIllustration(activeService.id)}
-                
-                {/* Luxury quality floating badge */}
-                <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md text-black text-[9px] font-black py-1 px-2.5 rounded-full flex items-center gap-1 shadow-sm uppercase tracking-wider font-mono">
-                  <Sparkles className="w-3 text-amber-500 fill-current" />
-                  <span>Savoir-Faire MYG</span>
-                </div>
               </div>
             </section>
 
