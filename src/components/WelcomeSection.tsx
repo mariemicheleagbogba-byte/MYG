@@ -31,24 +31,21 @@ export default function WelcomeSection() {
   );
 
   return (
-    <section className="px-6 py-8 flex flex-col items-center text-center bg-white border-b border-gray-50">
-      {/* Profile Video — lecture automatique en boucle infinie */}
-      <div className="relative mb-6">
-        <div className="w-[124px] h-[124px] rounded-full bg-gray-100 p-1 border-2 border-gray-200 shadow-md overflow-hidden">
-          <video
-            src="/profile-video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover rounded-full"
-            id="video-practitioner"
-          />
-        </div>
-        <span className="absolute bottom-1 right-1 bg-green-500 w-3.5 h-3.5 rounded-full border-2 border-white animate-pulse" title="Praticienne disponible" />
+    <section className="flex flex-col items-center text-center bg-white border-b border-gray-50">
+      {/* Profile Video — rectangle pleine largeur */}
+      <div className="w-full overflow-hidden mb-6" style={{ height: '240px' }}>
+        <video
+          src="/profile-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          id="video-practitioner"
+        />
       </div>
 
-      <div className="max-w-md">
+      <div className="px-6 max-w-md">
         <h3 className="text-lg font-bold font-sans tracking-tight mb-2 text-black">
           MYG par Sabrina
         </h3>
@@ -71,7 +68,7 @@ export default function WelcomeSection() {
       </a>
 
       {/* Horaires & Contact Switcheable Segment */}
-      <div className="w-full max-w-sm mt-10" id="section-quick-info">
+      <div className="w-full max-w-sm mt-10 px-6 pb-8" id="section-quick-info">
         <div className="grid grid-cols-2 gap-3 mb-6">
           <button
             onClick={() => setActiveTab('horaires')}
