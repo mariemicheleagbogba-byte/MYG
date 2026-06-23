@@ -352,43 +352,13 @@ export const REVIEWS: Review[] = [
 
 export const FAQS: FAQItem[] = [
   {
-    id: "faq_rdv",
-    question: "Comment prendre RDV ?",
-    answer: "Vous pouvez réserver directement sur cette application en cliquant sur 'Prendre RDV'. Après avoir choisi votre soin, la formule et votre créneau, vous recevrez les instructions de dépôt de l'acompte de 10€ pour confirmer votre réservation définitive."
-  },
-  {
-    id: "faq_horaires",
-    question: "Quels sont les horaires ?",
-    answer: "Le salon est ouvert du mardi au vendredi de 10h00 à 19h00 (nocturne le jeudi jusqu'à 20h00) et le samedi de 09h00 à 18h00. Nous sommes fermés les lundis et dimanches."
-  },
-  {
-    id: "faq_douleur",
-    question: "Le soin est-il douloureux ?",
-    answer: "Le blanchiment dentaire esthétique MYG utilise des formules douces qui conviennent même aux dents sensibles. La quasi-totalité de nos clients ne ressent aucune douleur. Une très légère sensibilité temporaire peut survenir dans les quelques heures suivant le soin, mais s'estompe très vite."
-  },
-  {
-    id: "faq_annulation",
-    question: "Comment annuler un RDV ?",
-    answer: "Toute modification ou annulation doit être communiquée au moins 24 heures avant l'heure prévue de votre rendez-vous. Vous pouvez l'effectuer via nos réseaux ou par SMS. L'acompte sera conservé pour un prochain rendez-vous s'il est reporté à temps. En deçà des 24 heures, l'acompte sera perdu."
-  },
-  {
-    id: "faq_acompte",
-    question: "Pourquoi un acompte est-il obligatoire ?",
-    answer: "Un acompte de 10€ par virement bancaire ou l'application Lydia/Paylib est demandé afin de valider et bloquer définitivement votre créneau horaire. Cela évite les rendez-vous non honorés et garantit que Sabrina puisse vous préparer le meilleur accueil personnalisé."
-  },
-  {
-    id: "faq_retards",
-    question: "Comment sont gérés les retards ?",
-    answer: "Pour le respect de toutes nos clientes, tout retard de plus de 10 minutes pourra entraîner un raccourcissement de votre soin ou l'annulation du rendez-vous, l'acompte restant dû. Merci de nous envoyer un message le plus tôt possible en cas d'imprévu."
+    id: "faq_horaires_hors",
+    question: "Peut-on prendre RDV en dehors des horaires d'ouverture ?",
+    answer: "Oui, il est tout à fait possible de prendre rendez-vous en dehors des horaires d'ouverture habituels. Il suffit de m'envoyer un message privé. À noter que les rendez-vous en nocturne (à partir de 18h) sont majorés de 10€."
   },
   {
     id: "faq_domicile",
-    question: "Proposez-vous les soins à domicile ?",
-    answer: "Oui ! Les prestations de blanchiment dentaire et de rehaussement de cils sont éligibles au déplacement à domicile à Marne-la-Vallée et dans les communes limitrophes dans un rayon de 10 km (avec un léger supplément à définir lors de notre contact)."
-  },
-  {
-    id: "faq_accompagnateur",
-    question: "Puis-je venir accompagnée ?",
-    answer: "Par mesure d'hygiène et de concentration pour vos soins, nous demandons à ce que vous veniez seule à votre rendez-vous, sauf dans le cadre d'une prestation programmée 'Offre Duo' où vous êtes toutes deux conviées."
+    question: "Proposez-vous des soins à domicile ?",
+    answer: "Oui, il suffit de m'écrire en message privé avec le jour, l'heure, la prestation que vous désirez et votre ville."
   }
 ];
