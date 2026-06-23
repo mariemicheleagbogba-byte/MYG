@@ -123,7 +123,8 @@ export const SERVICES: Service[] = [
         price: 30,
         description: "Séance à l'unité ciblant les fessiers par stimulation profonde par ventouses pour pulper et tonifier.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Séance à l'Unité"
       },
       {
         id: "hanches_seance",
@@ -132,7 +133,8 @@ export const SERVICES: Service[] = [
         price: 30,
         description: "Séance à l'unité ciblant les hanches pour lisser, drainer et redessiner la silhouette.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Séance à l'Unité"
       },
       {
         id: "fessiers_hanches_seance",
@@ -141,79 +143,88 @@ export const SERVICES: Service[] = [
         price: 50,
         description: "Séance à l'unité combinée ciblant fessiers et hanches pour un résultat global et harmonieux.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Séance à l'Unité"
       },
       {
         id: "sculpt_hanches_3",
-        name: "Sculpt & Hanches · 3 Séances",
+        name: "3 Séances",
         duration: "3 séances",
         price: 90,
         description: "Forfait de 3 séances Sculpt & Hanches pour amorcer un remodelage durable et visible de la silhouette.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Sculpt & Hanches"
       },
       {
         id: "sculpt_hanches_5",
-        name: "Sculpt & Hanches · 5 Séances",
+        name: "5 Séances",
         duration: "5 séances",
         price: 150,
         description: "Forfait de 5 séances Sculpt & Hanches pour un galbe renforcé et une tonification tissulaire progressive.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Sculpt & Hanches"
       },
       {
         id: "sculpt_hanches_7",
-        name: "Sculpt & Hanches · 7 Séances",
+        name: "7 Séances",
         duration: "7 séances",
         price: 210,
         description: "Forfait de 7 séances Sculpt & Hanches pour un résultat transformateur et durable sur la silhouette.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Sculpt & Hanches"
       },
       {
         id: "sculpt_hanches_10",
-        name: "Sculpt & Hanches · 10 Séances",
+        name: "10 Séances",
         duration: "10 séances",
         price: 250,
         description: "Forfait de 10 séances Sculpt & Hanches, le protocole intensif pour une transformation complète et pérenne.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Sculpt & Hanches"
       },
       {
         id: "fessiers_hanches_3",
-        name: "Fessiers & Hanches · 3 Séances",
+        name: "3 Séances",
         duration: "3 séances",
         price: 145,
         description: "Forfait de 3 séances ciblant fessiers et hanches simultanément pour une silhouette galbée et harmonisée.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Fessiers & Hanches"
       },
       {
         id: "fessiers_hanches_5",
-        name: "Fessiers & Hanches · 5 Séances",
+        name: "5 Séances",
         duration: "5 séances",
         price: 240,
         description: "Forfait de 5 séances fessiers & hanches pour un remodelage ciblé et une tonification profonde et durable.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Fessiers & Hanches"
       },
       {
         id: "fessiers_hanches_7",
-        name: "Fessiers & Hanches · 7 Séances",
+        name: "7 Séances",
         duration: "7 séances",
         price: 330,
         description: "Forfait de 7 séances fessiers & hanches pour une transformation visible et un galbe sculpté sur toute la zone.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Fessiers & Hanches"
       },
       {
         id: "fessiers_hanches_10",
-        name: "Fessiers & Hanches · 10 Séances",
+        name: "10 Séances",
         duration: "10 séances",
         price: 350,
         description: "Forfait de 10 séances fessiers & hanches, le protocole complet pour une silhouette entièrement remodelée.",
         atHomeEligible: false,
-        category: "lifting_colombien"
+        category: "lifting_colombien",
+        group: "Forfaits Fessiers & Hanches"
       }
     ]
   },

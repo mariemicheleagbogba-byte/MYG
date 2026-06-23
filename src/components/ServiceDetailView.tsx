@@ -254,50 +254,106 @@ export default function ServiceDetailView({
             </section>
 
             {/* Formulas pricing list items */}
-            <section className="px-6 space-y-6">
-              {activeService?.options.map((option) => (
-                <div 
-                  key={option.id} 
-                  className="border-b border-gray-100 pb-6 last:border-0 text-left"
-                  id={`service-option-block-${option.id}`}
-                >
-                  <div className="flex justify-between items-start mb-2.5">
-                    <div>
-                      <h3 className="font-extrabold text-black text-sm uppercase tracking-wider">
-                        {option.name}
-                      </h3>
-                      <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mt-0.5 font-mono">
-                        {option.id.includes('complete') ? 'Rituel Complet' : option.id.includes('duo') ? 'Offre Partagée' : 'Traitement Expert'}
-                      </span>
-                    </div>
-                    
-                    <div className="flex flex-col items-end">
-                      <span className="font-mono font-bold text-base text-black bg-gray-50 px-2 py-0.5 rounded border border-gray-150">
-                        {option.price}€
-                      </span>
-                      {activeServiceId === 'soins_visage' && (
-                        <span className="text-[9px] font-mono text-gray-400 mt-1 uppercase font-semibold">
-                          Durée : {option.duration}
-                        </span>
-                      )}
-                    </div>
-                  </div>
+            <section className="px-6">
+              {(() => {
+                if (!activeService) return null;
+                const hasGroups = activeService.options.some(o => o.group);
 
-                  <p className="text-[11px] text-gray-500 leading-relaxed mb-4 text-justify">
-                    {option.description}
-                  </p>
+                if (!hasGroups) {
+                  return (
+                    <div className="space-y-6">
+                      {activeService.options.map((option) => (
+                        <div
+                          key={option.id}
+                          className="border-b border-gray-100 pb-6 last:border-0 text-left"
+                          id={`service-option-block-${option.id}`}
+                        >
+                          <div className="flex justify-between items-start mb-2.5">
+                            <div>
+                              <h3 className="font-extrabold text-black text-sm uppercase tracking-wider">
+                                {option.name}
+                              </h3>
+                              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mt-0.5 font-mono">
+                                {option.id.includes('complete') ? 'Rituel Complet' : option.id.includes('duo') ? 'Offre Partagée' : 'Traitement Expert'}
+                              </span>
+                            </div>
+                            <div className="flex flex-col items-end">
+                              <span className="font-mono font-bold text-base text-black bg-gray-50 px-2 py-0.5 rounded border border-gray-150">
+                                {option.price}€
+                              </span>
+                              {activeServiceId === 'soins_visage' && (
+                                <span className="text-[9px] font-mono text-gray-400 mt-1 uppercase font-semibold">
+                                  Durée : {option.duration}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                          <p className="text-[11px] text-gray-500 leading-relaxed mb-4 text-justify">
+                            {option.description}
+                          </p>
+                          <div className="flex justify-end">
+                            <button
+                              onClick={() => onSelectOption(activeService.id, option)}
+                              className="bg-black hover:bg-neutral-850 active:scale-95 text-white font-bold py-1.5 px-4 rounded-sm text-[10px] uppercase tracking-wider transition-all cursor-pointer font-mono"
+                              id={`btn-book-formula-${option.id}`}
+                            >
+                              Réserver
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }
 
-                  <div className="flex justify-end">
-                    <button
-                      onClick={() => onSelectOption(activeService.id, option)}
-                      className="bg-black hover:bg-neutral-850 active:scale-95 text-white font-bold py-1.5 px-4 rounded-sm text-[10px] uppercase tracking-wider transition-all cursor-pointer font-mono"
-                      id={`btn-book-formula-${option.id}`}
-                    >
-                      Réserver
-                    </button>
+                // Grouped rendering (e.g. Lifting Colombien)
+                const groupOrder: string[] = [];
+                const groupMap: Record<string, typeof activeService.options> = {};
+                for (const option of activeService.options) {
+                  const g = option.group ?? 'Autres';
+                  if (!groupMap[g]) { groupMap[g] = []; groupOrder.push(g); }
+                  groupMap[g].push(option);
+                }
+
+                return (
+                  <div className="space-y-6">
+                    {groupOrder.map((groupName) => (
+                      <div key={groupName}>
+                        {/* Group header */}
+                        <div className="bg-[#EDE8E3] rounded-xl px-4 py-2.5 mb-3 text-center">
+                          <h3 className="text-[11px] font-extrabold uppercase tracking-widest text-black">
+                            {groupName}
+                          </h3>
+                        </div>
+                        {/* Options in group */}
+                        {groupMap[groupName].map((option) => (
+                          <div
+                            key={option.id}
+                            className="flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
+                            id={`service-option-block-${option.id}`}
+                          >
+                            <span className="text-xs font-bold text-black uppercase tracking-wide">
+                              {option.name}
+                            </span>
+                            <div className="flex items-center gap-3">
+                              <span className="font-mono font-bold text-sm text-black">
+                                {option.price}€
+                              </span>
+                              <button
+                                onClick={() => onSelectOption(activeService.id, option)}
+                                className="bg-black active:scale-95 text-white font-bold py-1 px-3 rounded-sm text-[9px] uppercase tracking-wider transition-all cursor-pointer font-mono"
+                                id={`btn-book-formula-${option.id}`}
+                              >
+                                RDV
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
+                );
+              })()}
             </section>
           </motion.div>
         )}

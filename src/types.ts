@@ -6,6 +6,7 @@ export interface ServiceOption {
   description: string;
   atHomeEligible: boolean;
   category: string;
+  group?: string;
 }
 
 export interface Service {
