@@ -269,7 +269,7 @@ export default function ServiceDetailView({
                               </h3>
                               <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mt-0.5 font-mono">
                                 {option.originalPrice
-                                  ? `Prix de base + ${option.originalPrice}€`
+                                  ? `Prix de base ${option.originalPrice}€`
                                   : option.id.includes('complete') ? 'Rituel Complet'
                                   : option.id.includes('duo') ? 'Offre Partagée'
                                   : 'Traitement Expert'}

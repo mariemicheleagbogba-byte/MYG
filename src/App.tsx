@@ -85,9 +85,8 @@ export default function App() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen text-black flex justify-center selection:bg-black selection:text-white pb-6">
-      {/* Simulation frame of mobile width for absolute wireframe fidelity on desktop, fluid responsive bounds */}
-      <div className="w-full max-w-md bg-white min-h-screen flex flex-col justify-between shadow-2xl relative overflow-x-hidden border-x border-gray-150">
+    <div className="bg-white min-h-screen text-black selection:bg-black selection:text-white">
+      <div className="w-full bg-white min-h-screen flex flex-col">
 
         {/* Navigation Sticky Top bar */}
         <Header
@@ -99,7 +98,7 @@ export default function App() {
         />
 
         {/* Dynamic view router switches */}
-        <main className="flex-1 bg-white">
+        <main className="flex-1 bg-white max-w-4xl mx-auto w-full">
           <AnimatePresence mode="wait">
             {currentView === 'home' && (
               <motion.div
@@ -233,8 +232,6 @@ export default function App() {
           </AnimatePresence>
         </main>
 
-        {/* Quick bottom visual highlight bar for simulating iOS layout */}
-        <div className="h-2 bg-gray-50/10 w-full" />
       </div>
 
       <AnimatePresence>
