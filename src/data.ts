@@ -35,7 +35,8 @@ export const SERVICES: Service[] = [
         price: 40,
         description: "Soin express pour purifier, nettoyer et hydrater votre peau en profondeur. Idéal pour un coup d'éclat rapide.",
         atHomeEligible: false,
-        category: "soins_visage"
+        category: "soins_visage",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/soin-visage-seance-express"
       },
       {
         id: "seance_complete_visage",
@@ -44,7 +45,8 @@ export const SERVICES: Service[] = [
         price: 50,
         description: "Soin complet alliant hydradermabrasion et vapeur pour nettoyer, exfolier, extraire les impuretés et hydrater intensément.",
         atHomeEligible: false,
-        category: "soins_visage"
+        category: "soins_visage",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/soin-visage-seance-complete"
       },
       {
         id: "cure_3_seances_visage",
@@ -53,7 +55,8 @@ export const SERVICES: Service[] = [
         price: 135,
         description: "Protocole de 3 séances espacées pour un résultat optimal et durable. La solution idéale pour une peau transformée en profondeur.",
         atHomeEligible: false,
-        category: "soins_visage"
+        category: "soins_visage",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/soin-visage-cure-de-3-seances"
       }
     ]
   },
@@ -70,7 +73,8 @@ export const SERVICES: Service[] = [
         price: 45,
         description: "Pose d'une extension unique sur chaque cil naturel pour un résultat soigné, élégant et discret au quotidien.",
         atHomeEligible: false,
-        category: "extensions_cils"
+        category: "extensions_cils",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/extensions-de-cils-cil-a-cil"
       },
       {
         id: "pose_mixte",
@@ -79,7 +83,8 @@ export const SERVICES: Service[] = [
         price: 55,
         description: "Association de techniques cil à cil et volume pour un regard intensifié et un effet naturel densifié sur mesure.",
         atHomeEligible: false,
-        category: "extensions_cils"
+        category: "extensions_cils",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/extensions-de-cils-pose-mixte"
       },
       {
         id: "volume_intense",
@@ -88,7 +93,8 @@ export const SERVICES: Service[] = [
         price: 60,
         description: "Bouquets ultra-légers pour un effet de densité noire intense et un volume spectaculaire.",
         atHomeEligible: false,
-        category: "extensions_cils"
+        category: "extensions_cils",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/extensions-de-cils-volume-intense"
       },
       {
         id: "remplissage_2_semaines",
@@ -97,7 +103,8 @@ export const SERVICES: Service[] = [
         price: 30,
         description: "Retouche complète pour maintenir l'effet de vos extensions à 2 semaines de la pose initiale.",
         atHomeEligible: false,
-        category: "extensions_cils"
+        category: "extensions_cils",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/extensions-de-cils-remplissage-2-semaines"
       },
       {
         id: "remplissage_3_semaines",
@@ -106,7 +113,8 @@ export const SERVICES: Service[] = [
         price: 40,
         description: "Remplissage complet pour redonner volume et densité à vos extensions à 3 semaines de la pose initiale.",
         atHomeEligible: false,
-        category: "extensions_cils"
+        category: "extensions_cils",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/extensions-de-cils-remplissage-3-semaines"
       }
     ]
   },
@@ -124,7 +132,8 @@ export const SERVICES: Service[] = [
         description: "Stimulez le galbe naturel de vos fessiers grâce à l'action ciblée des ventouses.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Séance à l'Unité"
+        group: "Séance à l'Unité",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-fessiers"
       },
       {
         id: "hanches_seance",
@@ -134,7 +143,8 @@ export const SERVICES: Service[] = [
         description: "Redessinez vos courbes et harmonisez votre silhouette.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Séance à l'Unité"
+        group: "Séance à l'Unité",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-hanches"
       },
       {
         id: "fessiers_hanches_seance",
@@ -144,7 +154,8 @@ export const SERVICES: Service[] = [
         description: "Associez nos deux soins clés pour démultiplier les résultats sur votre corps.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Séance à l'Unité"
+        group: "Séance à l'Unité",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-hanches-fessiers"
       },
       {
         id: "sculpt_hanches_3",
@@ -154,7 +165,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 3 séances Sculpt & Hanches pour amorcer un remodelage durable et visible de la silhouette.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Sculpt & Hanches"
+        group: "Forfaits Sculpt & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-sculpt-fessiers-3-seances"
       },
       {
         id: "sculpt_hanches_5",
@@ -164,7 +176,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 5 séances Sculpt & Hanches pour un galbe renforcé et une tonification tissulaire progressive.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Sculpt & Hanches"
+        group: "Forfaits Sculpt & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-sculpt-fessiers-5-seances"
       },
       {
         id: "sculpt_hanches_7",
@@ -174,7 +187,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 7 séances Sculpt & Hanches pour un résultat transformateur et durable sur la silhouette.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Sculpt & Hanches"
+        group: "Forfaits Sculpt & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-sculpt-fessiers-7-seances"
       },
       {
         id: "sculpt_hanches_10",
@@ -184,7 +198,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 10 séances Sculpt & Hanches, le protocole intensif pour une transformation complète et pérenne.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Sculpt & Hanches"
+        group: "Forfaits Sculpt & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-sculpt-fessiers-10-seances"
       },
       {
         id: "fessiers_hanches_3",
@@ -194,7 +209,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 3 séances ciblant fessiers et hanches simultanément pour une silhouette galbée et harmonisée.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Fessiers & Hanches"
+        group: "Forfaits Fessiers & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-fessiers-hanches-3-seances"
       },
       {
         id: "fessiers_hanches_5",
@@ -204,7 +220,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 5 séances fessiers & hanches pour un remodelage ciblé et une tonification profonde et durable.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Fessiers & Hanches"
+        group: "Forfaits Fessiers & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-fessiers-hanches-5-seances"
       },
       {
         id: "fessiers_hanches_7",
@@ -214,7 +231,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 7 séances fessiers & hanches pour une transformation visible et un galbe sculpté sur toute la zone.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Fessiers & Hanches"
+        group: "Forfaits Fessiers & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-fessiers-hanches-7-seances"
       },
       {
         id: "fessiers_hanches_10",
@@ -224,7 +242,8 @@ export const SERVICES: Service[] = [
         description: "Forfait de 10 séances fessiers & hanches, le protocole complet pour une silhouette entièrement remodelée.",
         atHomeEligible: false,
         category: "lifting_colombien",
-        group: "Forfaits Fessiers & Hanches"
+        group: "Forfaits Fessiers & Hanches",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/lifting-colombien-forfaits-fessiers-hanches-10-seances"
       }
     ]
   },
@@ -241,7 +260,8 @@ export const SERVICES: Service[] = [
         price: 80,
         description: "Soin d'une heure pour un sourire éclatant de blancheur, avec application d'un gel protecteur de fabrication française conforme aux exigences européennes et lampe LED de haute technologie.",
         atHomeEligible: true,
-        category: "blanchiment"
+        category: "blanchiment",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/blanchimement-dentaire-seance-complete"
       },
       {
         id: "offre_duo",
@@ -250,7 +270,8 @@ export const SERVICES: Service[] = [
         price: 70,
         description: "70€ par personne — uniquement valable à deux. Venez accompagnée pour profiter d'un tarif préférentiel d'exception dans un univers cocooning.",
         atHomeEligible: true,
-        category: "blanchiment"
+        category: "blanchiment",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/blanchiment-dentaire-offre-duo"
       },
       {
         id: "retouche",
@@ -259,7 +280,8 @@ export const SERVICES: Service[] = [
         price: 60,
         description: "Idéale dans les 6 mois pour entretenir la blancheur éclatante de votre émail et éliminer instantanément les tâches récentes de café, thé ou tabac.",
         atHomeEligible: true,
-        category: "blanchiment"
+        category: "blanchiment",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/blanchiment-dentaire-seance-de-retouche"
       },
       {
         id: "detartrage",
@@ -268,7 +290,8 @@ export const SERVICES: Service[] = [
         price: 50,
         description: "Soin d'élimination du tartre et des dépôts pour retrouver des dents saines, propres et une haleine fraîche.",
         atHomeEligible: false,
-        category: "blanchiment"
+        category: "blanchiment",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/blanchiment-dentaire-detartrage"
       }
     ]
   },
@@ -286,7 +309,8 @@ export const SERVICES: Service[] = [
         originalPrice: 120,
         description: "Blanchiment dentaire + soin visage Hydrapure. Le duo éclat pour un sourire et un teint sublimés en une seule séance.",
         atHomeEligible: false,
-        category: "formules_signature"
+        category: "formules_signature",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/nos-formules-signatures-formule-glow"
       },
       {
         id: "formule_regard_sourire",
@@ -296,7 +320,8 @@ export const SERVICES: Service[] = [
         originalPrice: 125,
         description: "Blanchiment dentaire + extensions de cils (cil à cil). Le combo star pour un regard intense et un sourire éclatant.",
         atHomeEligible: false,
-        category: "formules_signature"
+        category: "formules_signature",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/nos-formules-signatures-formule-regard-et-sourire"
       },
       {
         id: "formule_sculpt_glow",
@@ -306,7 +331,8 @@ export const SERVICES: Service[] = [
         originalPrice: 100,
         description: "Lifting colombien (fessiers + hanches) + soin visage Hydrapure. Corps sculpté et teint lumineux en une seule session.",
         atHomeEligible: false,
-        category: "formules_signature"
+        category: "formules_signature",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/nos-formules-signatures-formule-sculpt-et-glow"
       },
       {
         id: "formule_signature_complete",
@@ -316,7 +342,8 @@ export const SERVICES: Service[] = [
         originalPrice: 175,
         description: "Blanchiment dentaire + extensions de cils + soin visage Hydrapure. La formule ultime pour une transformation beauté totale.",
         atHomeEligible: false,
-        category: "formules_signature"
+        category: "formules_signature",
+        calendlyUrl: "https://calendly.com/mygbeautyroom/nos-formules-signatures-formule-signature-compete"
       }
     ]
   }

@@ -291,7 +291,7 @@ export default function ServiceDetailView({
                           </p>
                           <div className="flex justify-end">
                             <button
-                              onClick={() => onSelectOption(activeService.id, option)}
+                              onClick={() => window.open(option.calendlyUrl || 'https://calendly.com/mygbeautyroom', '_blank', 'noopener,noreferrer')}
                               className="bg-black hover:bg-neutral-850 active:scale-95 text-white font-bold py-1.5 px-4 rounded-sm text-[10px] uppercase tracking-wider transition-all cursor-pointer font-mono"
                               id={`btn-book-formula-${option.id}`}
                             >
@@ -345,7 +345,7 @@ export default function ServiceDetailView({
                                 {option.price}€
                               </span>
                               <button
-                                onClick={() => onSelectOption(activeService.id, option)}
+                                onClick={() => window.open(option.calendlyUrl || 'https://calendly.com/mygbeautyroom', '_blank', 'noopener,noreferrer')}
                                 className="bg-black active:scale-95 text-white font-bold py-1 px-3 rounded-sm text-[9px] uppercase tracking-wider transition-all cursor-pointer font-mono"
                                 id={`btn-book-formula-${option.id}`}
                               >

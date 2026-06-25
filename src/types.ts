@@ -8,6 +8,7 @@ export interface ServiceOption {
   category: string;
   group?: string;
   originalPrice?: number;
+  calendlyUrl?: string;
 }
 
 export interface Service {
