@@ -334,7 +334,7 @@ export default function ServiceDetailView({
                               <span className="text-xs font-bold text-black uppercase tracking-wide block">
                                 {option.name}
                               </span>
-                              {option.description && (
+                              {option.description && groupName === "Séance à l'Unité" && (
                                 <p className="text-[11px] text-gray-500 mt-0.5 leading-relaxed">
                                   {option.description}
                                 </p>
