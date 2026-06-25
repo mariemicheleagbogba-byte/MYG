@@ -327,13 +327,20 @@ export default function ServiceDetailView({
                         {groupMap[groupName].map((option) => (
                           <div
                             key={option.id}
-                            className="flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
+                            className="flex items-start justify-between py-3 border-b border-gray-100 last:border-0 gap-4"
                             id={`service-option-block-${option.id}`}
                           >
-                            <span className="text-xs font-bold text-black uppercase tracking-wide">
-                              {option.name}
-                            </span>
-                            <div className="flex items-center gap-3">
+                            <div className="flex-1">
+                              <span className="text-xs font-bold text-black uppercase tracking-wide block">
+                                {option.name}
+                              </span>
+                              {option.description && (
+                                <p className="text-[11px] text-gray-500 mt-0.5 leading-relaxed">
+                                  {option.description}
+                                </p>
+                              )}
+                            </div>
+                            <div className="flex items-center gap-3 flex-shrink-0">
                               <span className="font-mono font-bold text-sm text-black">
                                 {option.price}€
                               </span>

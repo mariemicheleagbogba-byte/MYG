@@ -121,7 +121,7 @@ export const SERVICES: Service[] = [
         name: "Fessiers",
         duration: "30min",
         price: 30,
-        description: "Séance à l'unité ciblant les fessiers par stimulation profonde par ventouses pour pulper et tonifier.",
+        description: "Stimulez le galbe naturel de vos fessiers grâce à l'action ciblée des ventouses.",
         atHomeEligible: false,
         category: "lifting_colombien",
         group: "Séance à l'Unité"
@@ -131,7 +131,7 @@ export const SERVICES: Service[] = [
         name: "Hanches",
         duration: "30min",
         price: 30,
-        description: "Séance à l'unité ciblant les hanches pour lisser, drainer et redessiner la silhouette.",
+        description: "Redessinez vos courbes et harmonisez votre silhouette.",
         atHomeEligible: false,
         category: "lifting_colombien",
         group: "Séance à l'Unité"
@@ -141,7 +141,7 @@ export const SERVICES: Service[] = [
         name: "Fessiers + Hanches",
         duration: "45min",
         price: 50,
-        description: "Séance à l'unité combinée ciblant fessiers et hanches pour un résultat global et harmonieux.",
+        description: "Associez nos deux soins clés pour démultiplier les résultats sur votre corps.",
         atHomeEligible: false,
         category: "lifting_colombien",
         group: "Séance à l'Unité"
