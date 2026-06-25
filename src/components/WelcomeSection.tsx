@@ -32,15 +32,15 @@ export default function WelcomeSection() {
 
   return (
     <section className="flex flex-col items-center text-center bg-white border-b border-gray-50">
-      {/* Profile Video — pleine largeur mobile, centré naturel sur desktop */}
-      <div className="w-full overflow-hidden mb-6 h-60 md:h-auto md:flex md:justify-center md:bg-black">
+      {/* Profile Video — pleine largeur, object-cover sans bandes noires */}
+      <div className="w-full overflow-hidden mb-6 h-60 md:h-auto md:aspect-video">
         <video
           src="/profile-video.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover md:w-auto md:h-auto md:max-h-[520px]"
+          className="w-full h-full object-cover"
           id="video-practitioner"
         />
       </div>
