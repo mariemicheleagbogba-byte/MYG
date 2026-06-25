@@ -17,7 +17,7 @@ export default function ImportantSection() {
               <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white text-sm font-mono select-none">
                 €
               </div>
-              <h3 className="text-[10px] font-extrabold uppercase tracking-widest text-black leading-none">
+              <h3 className="text-[10px] font-extrabold uppercase tracking-wide md:tracking-widest text-black leading-none">
                 Paiement
               </h3>
             </div>
@@ -34,7 +34,7 @@ export default function ImportantSection() {
               <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white">
                 <Users className="w-3.5 h-3.5" />
               </div>
-              <h3 className="text-[10px] font-extrabold uppercase tracking-widest text-black leading-none">
+              <h3 className="text-[10px] font-extrabold uppercase tracking-wide md:tracking-widest text-black leading-none">
                 Accompagnateurs
               </h3>
             </div>
@@ -51,7 +51,7 @@ export default function ImportantSection() {
               <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white">
                 <CalendarCheck className="w-3.5 h-3.5" />
               </div>
-              <h3 className="text-[10px] font-extrabold uppercase tracking-widest text-black leading-none">
+              <h3 className="text-[10px] font-extrabold uppercase tracking-wide md:tracking-widest text-black leading-none">
                 Prise de RDV
               </h3>
             </div>
@@ -68,7 +68,7 @@ export default function ImportantSection() {
               <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white">
                 <Clock className="w-3.5 h-3.5" />
               </div>
-              <h3 className="text-[10px] font-extrabold uppercase tracking-widest text-black leading-none">
+              <h3 className="text-[10px] font-extrabold uppercase tracking-wide md:tracking-widest text-black leading-none">
                 Retards
               </h3>
             </div>
