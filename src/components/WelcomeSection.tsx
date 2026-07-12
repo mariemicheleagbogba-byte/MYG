@@ -47,7 +47,7 @@ export default function WelcomeSection() {
 
       <div className="px-6 max-w-md">
         <h3 className="text-lg font-bold font-sans tracking-tight mb-2 text-black">
-          MYG par Gabrielle
+          MYG Beauty Room
         </h3>
         <p className="text-xs leading-relaxed text-gray-600 max-w-sm mx-auto">
           Bienvenue dans notre salon, parce que vous méritez le meilleur, je vous propose une large gamme de soins
@@ -57,14 +57,14 @@ export default function WelcomeSection() {
 
       {/* Interactive Location Link */}
       <a 
-        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Aubervilliers, France")}`}
+        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("100 avenue du Général Leclerc, 93500 Pantin, France")}`}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-6 flex items-center gap-2 text-[10px] font-bold text-gray-500 hover:text-black transition-colors bg-gray-50 hover:bg-gray-100 px-4 py-2 rounded-full cursor-pointer"
         id="link-location-maps"
       >
         <MapPin className="w-3.5 h-3.5 text-black" />
-        <span>Nous sommes situés à Aubervilliers</span>
+        <span>Nous sommes situés à Pantin</span>
       </a>
 
       {/* Horaires & Contact Switcheable Segment */}
@@ -102,24 +102,11 @@ export default function WelcomeSection() {
               initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2 }}
-              className="space-y-2 text-xs"
+              className="flex flex-col items-center justify-center h-full py-6 gap-3"
             >
-              <div className="flex items-center gap-2 mb-3 pb-2 border-b border-gray-200">
-                <Clock className="w-4 h-4 text-black" />
-                <span className="font-bold text-black uppercase tracking-wider text-[10px]">Heures d'Ouverture</span>
-              </div>
-              <div className="grid grid-cols-1 gap-2">
-                {sortedHours.map((schedule) => (
-                  <div key={schedule.day} className="flex justify-between items-center py-0.5">
-                    <span className="font-semibold text-gray-600">{schedule.day}</span>
-                    <span className={`font-mono text-xs ${schedule.hours === 'Fermé' ? 'text-red-500 font-semibold' : 'text-black'}`}>
-                      {schedule.hours}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-[10px] text-red-500 font-semibold mt-3 pt-3 border-t border-gray-200 leading-relaxed">
-                NB : Pour un rendez-vous hors heures d'ouverture, envoyez un message privé.
+              <Clock className="w-6 h-6 text-black" />
+              <p className="font-extrabold text-black uppercase tracking-widest text-center text-sm">
+                OUVERT 7J/7 DE 9H À 20H
               </p>
             </motion.div>
           ) : (

@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import WelcomeSection from './components/WelcomeSection';
 import ReservationPolicies from './components/ReservationPolicies';
-import PreAppointmentConditions from './components/PreAppointmentConditions';
 import ImportantSection from './components/ImportantSection';
 import ReviewsSection from './components/ReviewsSection';
 import ContactFAQSection from './components/ContactFAQSection';
@@ -112,9 +111,6 @@ export default function App() {
                 <WelcomeSection />
 
                 {/* 2. Policies */}
-
-                {/* 3. Pre Appointment Instructions */}
-                <PreAppointmentConditions />
 
                 {/* 4. Payment Currency instructions */}
                 <ImportantSection />

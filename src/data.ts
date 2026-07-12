@@ -3,8 +3,8 @@ import { CompanyInfo, Service, Review, FAQItem } from './types';
 export const COMPANY_INFO: CompanyInfo = {
   name: "MYG",
   owner: "Sabrina",
-  address: "Aubervilliers",
-  city: "Aubervilliers",
+  address: "100 avenue du Général Leclerc, 93500 Pantin",
+  city: "Pantin",
   instagram: "@mygbeautyroom",
   snapchat: "mygbeautyroom",
   email: "contact@mygbeautyroom.fr",
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "seance_complete_visage",
-        name: "Séance Complète",
+        name: "Séance Complète Hydrafacial",
         duration: "1h",
         price: 50,
         description: "Soin complet alliant hydradermabrasion et vapeur pour nettoyer, exfolier, extraire les impuretés et hydrater intensément.",
@@ -57,6 +57,24 @@ export const SERVICES: Service[] = [
         atHomeEligible: false,
         category: "soins_visage",
         calendlyUrl: "https://calendly.com/mygbeautyroom/soin-visage-cure-de-3-seances"
+      },
+      {
+        id: "peeling_algues_roses",
+        name: "Peeling aux algues/roses de mer",
+        duration: "45min",
+        price: 70,
+        description: "Soin exfoliant doux aux extraits d'algues et de roses de mer pour illuminer le teint et affiner le grain de peau.",
+        atHomeEligible: false,
+        category: "soins_visage"
+      },
+      {
+        id: "peeling_algues",
+        name: "Peeling aux algues",
+        duration: "1h",
+        price: 80,
+        description: "Soin exfoliant intensif aux algues marines pour purifier en profondeur, resserrer les pores et raviver l'éclat naturel.",
+        atHomeEligible: false,
+        category: "soins_visage"
       }
     ]
   },
@@ -68,9 +86,9 @@ export const SERVICES: Service[] = [
     options: [
       {
         id: "cil_a_cil",
-        name: "Cil à Cil",
-        duration: "1h30",
-        price: 45,
+        name: "Volume Russe",
+        duration: "2h",
+        price: 55,
         description: "Pose d'une extension unique sur chaque cil naturel pour un résultat soigné, élégant et discret au quotidien.",
         atHomeEligible: false,
         category: "extensions_cils",
@@ -79,7 +97,7 @@ export const SERVICES: Service[] = [
       {
         id: "pose_mixte",
         name: "Pose Mixte",
-        duration: "1h30",
+        duration: "2h",
         price: 55,
         description: "Association de techniques cil à cil et volume pour un regard intensifié et un effet naturel densifié sur mesure.",
         atHomeEligible: false,
@@ -88,7 +106,7 @@ export const SERVICES: Service[] = [
       },
       {
         id: "volume_intense",
-        name: "Volume Intense",
+        name: "Volume Wispy",
         duration: "2h",
         price: 60,
         description: "Bouquets ultra-légers pour un effet de densité noire intense et un volume spectaculaire.",
@@ -99,7 +117,7 @@ export const SERVICES: Service[] = [
       {
         id: "remplissage_2_semaines",
         name: "Remplissage 2 Semaines",
-        duration: "45min",
+        duration: "30min",
         price: 30,
         description: "Retouche complète pour maintenir l'effet de vos extensions à 2 semaines de la pose initiale.",
         atHomeEligible: false,
@@ -109,12 +127,39 @@ export const SERVICES: Service[] = [
       {
         id: "remplissage_3_semaines",
         name: "Remplissage 3 Semaines",
-        duration: "1h",
+        duration: "30min",
         price: 40,
         description: "Remplissage complet pour redonner volume et densité à vos extensions à 3 semaines de la pose initiale.",
         atHomeEligible: false,
         category: "extensions_cils",
         calendlyUrl: "https://calendly.com/mygbeautyroom/extensions-de-cils-remplissage-3-semaines"
+      },
+      {
+        id: "depose_cils",
+        name: "Dépose",
+        duration: "10min",
+        price: 15,
+        description: "Retrait délicat de vos extensions sans endommager vos cils naturels.",
+        atHomeEligible: false,
+        category: "extensions_cils"
+      },
+      {
+        id: "rehaussement_cils",
+        name: "Rehaussement de cils",
+        duration: "45min",
+        price: 30,
+        description: "Traitement courbant et rehaussant vos cils naturels pour un effet ouvert et lumineux sans extensions.",
+        atHomeEligible: false,
+        category: "extensions_cils"
+      },
+      {
+        id: "browlift",
+        name: "Browlift",
+        duration: "45min",
+        price: 30,
+        description: "Soin restructurant des sourcils pour un galbe parfait et un regard encadré avec précision.",
+        atHomeEligible: false,
+        category: "extensions_cils"
       }
     ]
   },
@@ -287,7 +332,7 @@ export const SERVICES: Service[] = [
         id: "detartrage",
         name: "Détartrage",
         duration: "45min",
-        price: 50,
+        price: 30,
         description: "Soin d'élimination du tartre et des dépôts pour retrouver des dents saines, propres et une haleine fraîche.",
         atHomeEligible: false,
         category: "blanchiment",
@@ -305,8 +350,8 @@ export const SERVICES: Service[] = [
         id: "formule_glow",
         name: "Formule Glow",
         duration: "2h",
-        price: 100,
-        originalPrice: 120,
+        price: 120,
+        originalPrice: 140,
         description: "Blanchiment dentaire + soin visage Hydrapure. Le duo éclat pour un sourire et un teint sublimés en une seule séance.",
         atHomeEligible: false,
         category: "formules_signature",
@@ -338,8 +383,8 @@ export const SERVICES: Service[] = [
         id: "formule_signature_complete",
         name: "Formule Signature Complète",
         duration: "3h",
-        price: 160,
-        originalPrice: 175,
+        price: 175,
+        originalPrice: 185,
         description: "Blanchiment dentaire + extensions de cils + soin visage Hydrapure. La formule ultime pour une transformation beauté totale.",
         atHomeEligible: false,
         category: "formules_signature",

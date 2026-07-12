@@ -80,14 +80,6 @@ export default function Header({
           </div>
         </div>
 
-        {/* Bandeau promo — visible uniquement sur la page d'accueil */}
-        {currentView === 'home' && (
-          <div className="w-full bg-gradient-to-r from-rose-500 to-pink-500 py-2 px-4 flex items-center justify-center text-center">
-            <p className="text-[9.5px] font-extrabold uppercase tracking-[0.12em] text-white">
-              Promo · Blanchiment Dentaire · Offre Spéciale en cours
-            </p>
-          </div>
-        )}
       </header>
 
       {/* Navigation Drawer Sidebar Overlay */}
