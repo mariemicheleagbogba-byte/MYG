@@ -18,11 +18,11 @@ export default function ImportantSection() {
                 €
               </div>
               <h3 className="text-[7.5px] md:text-[10px] font-extrabold uppercase tracking-normal md:tracking-widest text-black leading-tight min-w-0">
-                Paiement
+                Acompte
               </h3>
             </div>
             <p className="text-[10px] leading-relaxed text-gray-500">
-              Le solde s'effectue en <span className="font-semibold text-black">espèces</span> ou par <span className="font-semibold text-black">virement immédiat</span> (Lydia, Paylib). Les chèques ne sont pas acceptés.
+              Un acompte de <span className="font-semibold text-black">15 €</span> vous sera demandé pour valider votre prise de rendez-vous.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function ImportantSection() {
               </h3>
             </div>
             <p className="text-[10px] leading-relaxed text-gray-500">
-              <span className="font-semibold text-black">Aucun accompagnateur</span> (ami, enfant) n'est admis en cabine par mesure d'hygiène, hors formule Duo.
+              Pour votre rendez-vous, la présence d'<span className="font-semibold text-black">un seul accompagnant</span> est autorisée.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ImportantSection() {
               </h3>
             </div>
             <p className="text-[10px] leading-relaxed text-gray-500">
-              Pour confirmer votre RDV, un message doit être envoyé <span className="font-semibold text-black">24h avant</span>. Passé ce délai, toute réservation non confirmée sera automatiquement annulée, et l'acompte ne sera pas remboursé.
+              Un SMS vous sera envoyé <span className="font-semibold text-black">24h avant</span> le rendez-vous. Passé ce délai, le RDV est validé : il ne peut plus être annulé et l'acompte n'est plus remboursable.
             </p>
           </div>
         </div>
