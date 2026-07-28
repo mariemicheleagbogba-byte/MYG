@@ -77,7 +77,7 @@ export default function WelcomeSection() {
               <img
                 src={src}
                 alt={`MYG Beauty Room ${idx + 1}`}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
                 draggable={false}
               />
             </div>
