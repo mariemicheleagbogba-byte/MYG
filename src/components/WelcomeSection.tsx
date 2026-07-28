@@ -110,6 +110,41 @@ export default function WelcomeSection() {
         <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
       </div>
 
+      {/* Barre moyens de paiement */}
+      <div className="w-full py-4 px-6 bg-white border-b border-gray-100 flex items-center justify-center gap-6 sm:gap-10 mb-6">
+        {/* Paiement sans contact */}
+        <svg viewBox="0 0 82 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto">
+          <ellipse cx="28" cy="29" rx="24" ry="20" stroke="black" strokeWidth="1.5" fill="none"/>
+          <rect x="9" y="21" width="22" height="14" rx="2" stroke="black" strokeWidth="1.3" fill="none"/>
+          <line x1="9" y1="25" x2="31" y2="25" stroke="black" strokeWidth="1"/>
+          <path d="M38 23 C42 23 45 25.5 45 29 C45 32.5 42 35 38 35" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+          <path d="M43 18 C50 20 54 24 54 29 C54 34 50 38 43 40" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+          <path d="M49 13 C59 16 65 22 65 29 C65 36 59 42 49 45" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+        </svg>
+
+        <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
+
+        {/* Espèces */}
+        <svg viewBox="0 0 72 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto">
+          <g transform="rotate(-7 36 32)">
+            <rect x="6" y="16" width="48" height="30" rx="2.5" stroke="black" strokeWidth="1.3" fill="white"/>
+          </g>
+          <g transform="rotate(-3.5 36 32)">
+            <rect x="6" y="16" width="48" height="30" rx="2.5" stroke="black" strokeWidth="1.3" fill="white"/>
+          </g>
+          <rect x="6" y="14" width="48" height="30" rx="2.5" stroke="black" strokeWidth="1.3" fill="white"/>
+          <circle cx="30" cy="29" r="9" stroke="black" strokeWidth="1.2" fill="none"/>
+          <text x="30" y="33.5" textAnchor="middle" fontSize="12" fill="black" fontFamily="Georgia, serif">€</text>
+        </svg>
+
+        <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
+
+        {/* Wero */}
+        <div className="bg-[#FADF00] px-3.5 py-2 rounded-sm flex items-center">
+          <span className="text-black font-black text-base tracking-tighter leading-none" style={{ fontFamily: '"Arial Black", "Helvetica Neue", sans-serif' }}>wero</span>
+        </div>
+      </div>
+
       <div className="px-6 max-w-md">
         <h3 className="text-lg font-bold font-sans tracking-tight mb-2 text-black">
           MYG Beauty Room
