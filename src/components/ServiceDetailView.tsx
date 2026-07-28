@@ -38,10 +38,19 @@ export default function ServiceDetailView({
     formules_signature: '/gallery-cils-2.jpg',
   };
 
+  const BG_COLORS: Record<string, string> = {
+    soins_visage: '#E5E1DC',
+    extensions_cils: '#EBDCD0',
+    lifting_colombien: '#E2DCD3',
+    blanchiment: '#EAEBED',
+    formules_signature: '#EEEAE1',
+  };
+
   function renderServiceIllustration(serviceId: string) {
     const photo = SERVICE_PHOTOS[serviceId];
+    const bg = BG_COLORS[serviceId] || '#F0EDE8';
     return (
-      <div className="w-full h-52 overflow-hidden">
+      <div className="w-full h-52 overflow-hidden" style={{ backgroundColor: bg }}>
         <img
           src={photo}
           alt=""
