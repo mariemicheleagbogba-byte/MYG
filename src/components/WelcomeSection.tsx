@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MapPin, Clock, Instagram, Phone, Copy } from 'lucide-react';
 import { motion } from 'motion/react';
 import { COMPANY_INFO } from '../data';
@@ -15,15 +15,39 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
+const GALLERY_PHOTOS = [
+  '/gallery-cils-1.jpg',
+  '/gallery-lifting.jpg',
+  '/gallery-cils-2.jpg',
+  '/gallery-soin-2.jpg',
+  '/gallery-cils-3.jpg',
+  '/gallery-soin-1.jpg',
+  '/gallery-rehaussement.jpg',
+  '/gallery-browlift.jpg',
+  '/gallery-blanchiment.jpg',
+];
+
 export default function WelcomeSection() {
   const [activeTab, setActiveTab] = useState<'horaires' | 'contact'>('horaires');
   const [copiedText, setCopiedText] = useState<string | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const touchStartX = useRef<number | null>(null);
 
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
     setCopiedText(label);
     setTimeout(() => setCopiedText(null), 2000);
   };
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % GALLERY_PHOTOS.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goTo = (idx: number) => setCurrentSlide((idx + GALLERY_PHOTOS.length) % GALLERY_PHOTOS.length);
 
   const dayOrder = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
   const sortedHours = [...COMPANY_INFO.workingHours].sort(
@@ -32,17 +56,49 @@ export default function WelcomeSection() {
 
   return (
     <section className="flex flex-col items-center text-center bg-white border-b border-gray-50">
-      {/* Profile Video — pleine largeur, object-cover sans bandes noires */}
-      <div className="w-full overflow-hidden mb-6 h-60 md:h-auto md:aspect-video">
-        <video
-          src="/profile-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-          id="video-practitioner"
-        />
+      {/* Carousel */}
+      <div
+        className="w-full overflow-hidden mb-6 h-80 md:h-[500px] relative select-none"
+        onTouchStart={e => { touchStartX.current = e.targetTouches[0].clientX; }}
+        onTouchEnd={e => {
+          if (touchStartX.current === null) return;
+          const diff = touchStartX.current - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) goTo(currentSlide + (diff > 0 ? 1 : -1));
+          touchStartX.current = null;
+        }}
+      >
+        {/* Slides */}
+        <div
+          className="flex h-full transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {GALLERY_PHOTOS.map((src, idx) => (
+            <div key={idx} className="w-full h-full flex-shrink-0">
+              <img
+                src={src}
+                alt={`MYG Beauty Room ${idx + 1}`}
+                className="w-full h-full object-cover object-center"
+                draggable={false}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Dots */}
+        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 pointer-events-none">
+          {GALLERY_PHOTOS.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => goTo(idx)}
+              className={`rounded-full transition-all duration-300 pointer-events-auto ${
+                idx === currentSlide ? 'bg-white w-5 h-1.5' : 'bg-white/50 w-1.5 h-1.5'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Subtle gradient bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
       </div>
 
       <div className="px-6 max-w-md">

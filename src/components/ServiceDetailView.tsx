@@ -30,112 +30,25 @@ export default function ServiceDetailView({
   const activeServiceIndex = SERVICES.findIndex(s => s.id === activeServiceId);
   const activeService = activeServiceIndex !== -1 ? SERVICES[activeServiceIndex] : null;
 
-  // Custom premium illustrative vectors matching the video strictly
+  const SERVICE_PHOTOS: Record<string, string> = {
+    soins_visage: '/gallery-soin-2.jpg',
+    extensions_cils: '/gallery-cils-1.jpg',
+    lifting_colombien: '/gallery-lifting.jpg',
+    blanchiment: '/gallery-blanchiment.jpg',
+    formules_signature: '/gallery-cils-2.jpg',
+  };
+
   function renderServiceIllustration(serviceId: string) {
-    switch (serviceId) {
-      case 'soins_visage':
-        return (
-          <div className="w-full h-52 bg-[#E5E1DC] rounded-t-2xl relative flex items-center justify-center overflow-hidden">
-            {/* Signature grey control lens dot on upper-right */}
-            <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-neutral-600/30 backdrop-blur-md shadow-xs" />
-            
-            {/* Central futuristic cosmetic lens plate illustration */}
-            <div className="relative w-20 h-20 rounded-full bg-[#CCC4B9] shadow-md flex items-center justify-center">
-              <div className="w-12 h-12 rounded-full bg-[#E5E1DC] shadow-inner flex items-center justify-center">
-                <div className="w-5 h-5 rounded-full bg-[#B9AE9F] shadow-md" />
-              </div>
-            </div>
-            
-            {/* Subtle light reflect line */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#FFF]/10 to-transparent pointer-events-none" />
-          </div>
-        );
-      case 'extensions_cils':
-        return (
-          <div className="w-full h-52 bg-[#EBDCD0] rounded-t-2xl relative flex items-center justify-center overflow-hidden">
-            {/* Signature grey control lens dot on upper-right */}
-            <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-neutral-600/30 backdrop-blur-md shadow-xs" />
-            
-            {/* Minimalist eyeball and long lashes graphics */}
-            <div className="relative flex items-center justify-center">
-              <svg className="w-24 h-24 text-stone-700/90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Eye contour */}
-                <path d="M22 53 C 35 28, 65 28, 78 53" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
-                <path d="M22 53 C 35 34, 65 34, 78 53" stroke="currentColor" strokeWidth="0.8" strokeDasharray="3 3" strokeLinecap="round"/>
-                {/* Eyelashes */}
-                <path d="M30 46 L 23 26" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M40 40 L 35 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M50 38 L 50 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M60 40 L 65 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M70 46 L 77 26" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                {/* Pupil/Iris circle */}
-                <circle cx="50" cy="53" r="11" stroke="currentColor" strokeWidth="2" fill="#FAF5EF"/>
-                <circle cx="50" cy="53" r="4.5" fill="currentColor"/>
-              </svg>
-            </div>
-            
-            {/* Light glare */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#FFF]/10 to-transparent pointer-events-none" />
-          </div>
-        );
-      case 'lifting_colombien':
-        return (
-          <div className="w-full h-52 bg-[#E2DCD3] rounded-t-2xl relative flex items-center justify-center overflow-hidden">
-            {/* Signature grey control lens dot on upper-right */}
-            <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-neutral-600/30 backdrop-blur-md shadow-xs" />
-            
-            {/* Stylized contour design of standard sculpture body */}
-            <div className="relative">
-              <svg className="w-20 h-20 text-stone-700/90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Aesthetic body curves of skin remodeling */}
-                <path d="M37 15 C 39 28, 42 38, 45 48 C 39 58, 30 73, 32 87 C 44 87, 56 87, 68 87 C 70 73, 61 58, 55 48 C 58 38, 61 28, 63 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
-                <circle cx="50" cy="22" r="3.5" fill="currentColor"/>
-                <path d="M45 48 C 48 52, 52 52, 55 48" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-            </div>
-            
-            {/* Subtle glow highlight */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#FFF]/15 to-transparent pointer-events-none" />
-          </div>
-        );
-      case 'formules_signature':
-        return (
-          <div className="w-full h-52 bg-[#EEEAE1] rounded-t-2xl relative flex items-center justify-center overflow-hidden">
-            {/* Signature grey control lens dot on upper-right */}
-            <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-neutral-600/30 backdrop-blur-md shadow-xs" />
-            
-            {/* Beautiful radiant cosmic star shape representing complete formula option */}
-            <div className="relative">
-              <svg className="w-24 h-24 text-amber-700/50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 15 C 50 35, 35 50, 15 50 C 35 50, 50 65, 50 85 C 50 65, 65 50, 85 50 C 65 50, 50 35, 50 15 Z" fill="currentColor"/>
-                {/* Secondary starlet */}
-                <path d="M74 26 Q 74 32 80 32 Q 74 32 74 38 Q 74 32 68 32 Q 74 32 74 26 Z" fill="currentColor" opacity="0.8"/>
-                {/* Small supportive stars */}
-                <circle cx="25" cy="72" r="2" fill="currentColor"/>
-                <circle cx="32" cy="78" r="1" fill="currentColor"/>
-              </svg>
-            </div>
-          </div>
-        );
-      case 'blanchiment':
-      default:
-        return (
-          <div className="w-full h-52 bg-[#EAEBED] rounded-t-2xl relative flex items-center justify-center overflow-hidden">
-            {/* Signature grey control lens dot on upper-right */}
-            <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-neutral-600/30 backdrop-blur-md shadow-xs" />
-            
-            {/* Radiant clean minimal smile/tooth */}
-            <div className="relative">
-              <svg className="w-20 h-20 text-stone-700/90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 30 C 35 22, 45 22, 50 26 C 55 22, 65 22, 68 30 C 72 45, 68 70, 62 80 C 58 83, 52 75, 50 72 C 48 75, 42 83, 38 80 C 32 70, 28 45, 32 30 Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                {/* Glinting star */}
-                <path d="M72 17 Q 72 25 80 25 Q 72 25 72 33 Q 72 25 64 25 Q 72 25 72 17 Z" fill="currentColor"/>
-                <path d="M38 48 C 45 52, 55 52, 62 48" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </div>
-          </div>
-        );
-    }
+    const photo = SERVICE_PHOTOS[serviceId];
+    return (
+      <div className="w-full h-52 overflow-hidden">
+        <img
+          src={photo}
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+    );
   }
 
   return (
