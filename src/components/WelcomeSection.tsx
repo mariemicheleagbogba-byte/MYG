@@ -112,20 +112,8 @@ export default function WelcomeSection() {
 
       {/* Barre moyens de paiement */}
       <div className="w-full py-4 px-6 bg-white border-b border-gray-100 flex items-center justify-center gap-6 sm:gap-10 mb-6">
-        {/* Paiement sans contact — logo standard : ovale + carte + 4 arcs NFC */}
-        <svg viewBox="0 0 112 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-11 w-auto">
-          {/* Ovale */}
-          <ellipse cx="56" cy="34" rx="48" ry="28" stroke="#111" strokeWidth="1.9" fill="none"/>
-          {/* Carte bancaire */}
-          <rect x="18" y="22" width="36" height="24" rx="2.5" stroke="#111" strokeWidth="1.6" fill="white"/>
-          {/* Puce de la carte */}
-          <rect x="23" y="27" width="8" height="6" rx="1" stroke="#111" strokeWidth="1.1" fill="none"/>
-          {/* 4 arcs NFC (demi-cercles s'ouvrant à droite) */}
-          <path d="M 60 28 A 6 6 0 0 1 60 40" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-          <path d="M 60 22 A 12 12 0 0 1 60 46" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-          <path d="M 60 16 A 18 18 0 0 1 60 52" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-          <path d="M 60 10 A 24 24 0 0 1 60 58" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-        </svg>
+        {/* Paiement sans contact — icône Flaticon LAFS */}
+        <img src="/contactless.png" alt="Paiement sans contact" className="h-12 w-auto" />
 
         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
 
