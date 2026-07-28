@@ -112,27 +112,19 @@ export default function WelcomeSection() {
 
       {/* Barre moyens de paiement */}
       <div className="w-full py-4 px-6 bg-white border-b border-gray-100 flex items-center justify-center gap-6 sm:gap-10 mb-6">
-        {/* Paiement sans contact — ovale + arcs NFC + main tenant carte */}
-        <svg viewBox="0 0 112 72" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-11 w-auto">
-          <ellipse cx="56" cy="36" rx="49" ry="29" stroke="#111" strokeWidth="1.9" fill="none"/>
-          {/* Arcs NFC (gauche, s'ouvrant vers la droite) */}
-          <path d="M38 29 C42 29 44 32 44 36 C44 40 42 43 38 43" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-          <path d="M32 23 C39 23 45 28.5 45 36 C45 43.5 39 49 32 49" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-          <path d="M26 17 C36 17 46 25.5 46 36 C46 46.5 36 55 26 55" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
-          {/* Carte */}
-          <rect x="53" y="27" width="22" height="14" rx="2" stroke="#111" strokeWidth="1.5" fill="white"/>
-          <rect x="56" y="29.5" width="5.5" height="4" rx="0.7" stroke="#111" strokeWidth="1" fill="none"/>
-          {/* 4 doigts au-dessus de la carte */}
-          <line x1="56" y1="27" x2="55" y2="19" stroke="#111" strokeWidth="1.7" strokeLinecap="round"/>
-          <line x1="61" y1="27" x2="61" y2="18" stroke="#111" strokeWidth="1.7" strokeLinecap="round"/>
-          <line x1="66" y1="27" x2="66" y2="18" stroke="#111" strokeWidth="1.7" strokeLinecap="round"/>
-          <line x1="71" y1="27" x2="72" y2="19" stroke="#111" strokeWidth="1.7" strokeLinecap="round"/>
-          {/* Paume haut */}
-          <path d="M55 19 Q63 15.5 72 19" stroke="#111" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-          {/* Paume bas */}
-          <path d="M55 41 Q63 45 72 41" stroke="#111" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-          {/* Pouce (côté droit) */}
-          <path d="M75 30 Q81 33 81 36 Q81 40 75 41" stroke="#111" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+        {/* Paiement sans contact — logo standard : ovale + carte + 4 arcs NFC */}
+        <svg viewBox="0 0 112 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-11 w-auto">
+          {/* Ovale */}
+          <ellipse cx="56" cy="34" rx="48" ry="28" stroke="#111" strokeWidth="1.9" fill="none"/>
+          {/* Carte bancaire */}
+          <rect x="18" y="22" width="36" height="24" rx="2.5" stroke="#111" strokeWidth="1.6" fill="white"/>
+          {/* Puce de la carte */}
+          <rect x="23" y="27" width="8" height="6" rx="1" stroke="#111" strokeWidth="1.1" fill="none"/>
+          {/* 4 arcs NFC (demi-cercles s'ouvrant à droite) */}
+          <path d="M 60 28 A 6 6 0 0 1 60 40" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+          <path d="M 60 22 A 12 12 0 0 1 60 46" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+          <path d="M 60 16 A 18 18 0 0 1 60 52" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+          <path d="M 60 10 A 24 24 0 0 1 60 58" stroke="#111" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
         </svg>
 
         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
