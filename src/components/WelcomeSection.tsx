@@ -73,11 +73,20 @@ export default function WelcomeSection() {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {GALLERY_PHOTOS.map((src, idx) => (
-            <div key={idx} className="w-full h-full flex-shrink-0">
+            <div key={idx} className="w-full h-full flex-shrink-0 relative overflow-hidden">
+              {/* Fond flouté */}
+              <img
+                src={src}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70"
+                draggable={false}
+                aria-hidden
+              />
+              {/* Image principale */}
               <img
                 src={src}
                 alt={`MYG Beauty Room ${idx + 1}`}
-                className="w-full h-full object-contain"
+                className="relative z-10 w-full h-full object-contain"
                 draggable={false}
               />
             </div>
