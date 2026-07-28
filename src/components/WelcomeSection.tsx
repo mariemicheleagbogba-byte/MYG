@@ -58,7 +58,7 @@ export default function WelcomeSection() {
     <section className="flex flex-col items-center text-center bg-white border-b border-gray-50">
       {/* Carousel */}
       <div
-        className="w-full overflow-hidden mb-6 h-80 md:h-[500px] relative select-none"
+        className="w-full overflow-hidden mb-6 h-80 md:h-[500px] relative select-none bg-black"
         onTouchStart={e => { touchStartX.current = e.targetTouches[0].clientX; }}
         onTouchEnd={e => {
           if (touchStartX.current === null) return;
@@ -77,7 +77,7 @@ export default function WelcomeSection() {
               <img
                 src={src}
                 alt={`MYG Beauty Room ${idx + 1}`}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain"
                 draggable={false}
               />
             </div>
