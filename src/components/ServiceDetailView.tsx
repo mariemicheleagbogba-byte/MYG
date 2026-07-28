@@ -48,13 +48,20 @@ export default function ServiceDetailView({
 
   function renderServiceIllustration(serviceId: string) {
     const photo = SERVICE_PHOTOS[serviceId];
-    const bg = BG_COLORS[serviceId] || '#F0EDE8';
     return (
-      <div className="w-full h-52 overflow-hidden" style={{ backgroundColor: bg }}>
+      <div className="w-full h-52 overflow-hidden relative">
+        {/* Fond flouté */}
         <img
           src={photo}
           alt=""
-          className="w-full h-full object-contain"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-70"
+          aria-hidden
+        />
+        {/* Image principale */}
+        <img
+          src={photo}
+          alt=""
+          className="relative z-10 w-full h-full object-contain"
         />
       </div>
     );
