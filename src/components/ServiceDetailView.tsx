@@ -31,11 +31,11 @@ export default function ServiceDetailView({
   const activeService = activeServiceIndex !== -1 ? SERVICES[activeServiceIndex] : null;
 
   const SERVICE_PHOTOS: Record<string, string> = {
-    soins_visage: '/gallery-soin-2.jpg',
+    soins_visage: '/gallery-soin-2.webp',
     extensions_cils: '/gallery-cils-1.jpg',
-    lifting_colombien: '/gallery-lifting.jpg',
-    blanchiment: '/gallery-blanchiment.jpg',
-    formules_signature: '/gallery-cils-2.jpg',
+    lifting_colombien: '/gallery-lifting.webp',
+    blanchiment: '/gallery-blanchiment.png',
+    formules_signature: '/gallery-cils-2.webp',
   };
 
   const BG_COLORS: Record<string, string> = {

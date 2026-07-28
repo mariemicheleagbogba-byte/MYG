@@ -17,14 +17,14 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 
 const GALLERY_PHOTOS = [
   '/gallery-cils-1.jpg',
-  '/gallery-lifting.jpg',
-  '/gallery-cils-2.jpg',
-  '/gallery-soin-2.jpg',
-  '/gallery-cils-3.jpg',
-  '/gallery-soin-1.jpg',
-  '/gallery-rehaussement.jpg',
-  '/gallery-browlift.jpg',
-  '/gallery-blanchiment.jpg',
+  '/gallery-lifting.webp',
+  '/gallery-cils-2.webp',
+  '/gallery-soin-2.webp',
+  '/gallery-cils-3.webp',
+  '/gallery-soin-1.webp',
+  '/gallery-rehaussement.webp',
+  '/gallery-browlift.webp',
+  '/gallery-blanchiment.png',
 ];
 
 export default function WelcomeSection() {
